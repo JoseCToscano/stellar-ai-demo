@@ -126,39 +126,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             </SidebarMenuItem>
           </SidebarMenu>
           
-          {/* Support Section */}
-          <div className="px-2 py-1 pt-4">
-            <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
-              Support
-            </h3>
-          </div>
           
-          <SidebarMenu>
-            <SidebarMenuItem>
-              <SidebarMenuButton 
-                className="cursor-pointer h-auto py-2"
-                onClick={() => {
-                  navigator.clipboard.writeText('jose.toscano');
-                  // Simple notification that username was copied
-                  const button = document.activeElement as HTMLElement;
-                  if (button) {
-                    button.style.opacity = '0.7';
-                    setTimeout(() => {
-                      button.style.opacity = '1';
-                    }, 200);
-                  }
-                }}
-              >
-                <div className="w-5 h-5 bg-indigo-500 rounded flex items-center justify-center flex-shrink-0">
-                  <span className="text-white text-xs">💬</span>
-                </div>
-                <div className="flex flex-col gap-0.5 min-w-0">
-                  <span className="font-medium text-sm leading-tight">Message the Team</span>
-                  <span className="text-xs text-muted-foreground leading-tight">Discord: jose.toscano</span>
-                </div>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-          </SidebarMenu>
         </div>
       </SidebarContent>
       
