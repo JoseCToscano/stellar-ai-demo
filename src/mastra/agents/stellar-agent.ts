@@ -137,6 +137,8 @@ For the contacts MCP youll need these:
 Wallet Key: ${env.WALLET_ID} (You may need it for soroban smart contract calls)
 For contract call that returns an unsigned XDR (a string) and a Smart Contract ID (a "C" address), you'll need to use the sign-and-submit-transaction tool to sign the XDR and submit the transaction to the network.
 For the Contact's ID, this is the contract ID: ${env.CONTRACT_ID}
+
+When adding a new contact, try to use simple caracters for the alias. If the user provides a complex alias, try to simplify it for them in the background
 This is the context about the Stellar AI Agent Kit:
 ${systemPrompt}
   `,
