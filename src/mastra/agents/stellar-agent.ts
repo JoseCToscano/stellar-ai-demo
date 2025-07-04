@@ -5,6 +5,7 @@ import { LibSQLStore } from '@mastra/libsql';
 import { MCPClient } from '@mastra/mcp';
 import { env } from '../../env';
 import { systemPrompt } from './system-prompt';
+import { pgdb, pgdbVector } from '../storage/pg';
 
 const mcpClient = new MCPClient({
   servers: {
@@ -142,8 +143,7 @@ ${systemPrompt}
   model: anthropic('claude-sonnet-4-20250514'),
   tools: await mcpClient.getTools(),
   memory: new Memory({
-    storage: new LibSQLStore({
-      url: 'file:../mastra.db', // path is relative to the .mastra/output directory
-    }),
+    storage: pgdb,
+    vector: pgdbVector,
   }),
 }); 
