@@ -73,8 +73,22 @@ const ThreadWelcome: FC = () => {
   return (
     <ThreadPrimitive.Empty>
       <div className="flex w-full max-w-[var(--thread-max-width)] flex-grow flex-col">
-        <div className="flex w-full flex-grow flex-col items-center justify-center">
-          <p className="mt-4 font-medium">How can I help you today?</p>
+        <div className="flex w-full flex-grow flex-col items-center justify-center px-4">
+          <div className="text-center space-y-4 max-w-lg">
+            <div className="text-6xl">☕</div>
+            <div className="space-y-2">
+              <h2 className="text-2xl font-bold tracking-tight">Ready for a free coffee?</h2>
+              <p className="text-muted-foreground text-base leading-relaxed">
+                                 Show me you understand the <span className="font-semibold text-foreground">Stellar AI Agent Kit</span> – 
+                 its capabilities, architecture, and risks. Once you demonstrate your knowledge, 
+                 I&apos;ll sponsor your well-deserved coffee! ☕
+              </p>
+            </div>
+            <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground bg-muted/50 rounded-full px-4 py-2">
+              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+              AI Agent ready to help
+            </div>
+          </div>
         </div>
         <ThreadWelcomeSuggestions />
       </div>
@@ -84,24 +98,26 @@ const ThreadWelcome: FC = () => {
 
 const ThreadWelcomeSuggestions: FC = () => {
   return (
-    <div className="mt-3 flex w-full items-stretch justify-center gap-4">
+    <div className="mt-6 flex w-full items-stretch justify-center gap-4 px-4">
       <ThreadPrimitive.Suggestion
-        className="hover:bg-muted/80 flex max-w-sm grow basis-0 flex-col items-center justify-center rounded-lg border p-3 transition-colors ease-in"
+        className="hover:bg-muted/80 hover:border-muted-foreground/20 flex max-w-sm grow basis-0 flex-col items-center justify-center rounded-xl border border-muted p-4 transition-all ease-in hover:shadow-sm"
         prompt="Can I really get a free coffee?"
         method="replace"
         autoSend
       >
-        <span className="line-clamp-2 text-ellipsis text-sm font-semibold">
+        <div className="text-2xl mb-2">☕</div>
+        <span className="line-clamp-2 text-ellipsis text-sm font-semibold text-center">
           Can I really get a free coffee?
         </span>
       </ThreadPrimitive.Suggestion>
       <ThreadPrimitive.Suggestion
-        className="hover:bg-muted/80 flex max-w-sm grow basis-0 flex-col items-center justify-center rounded-lg border p-3 transition-colors ease-in"
+        className="hover:bg-muted/80 hover:border-muted-foreground/20 flex max-w-sm grow basis-0 flex-col items-center justify-center rounded-xl border border-muted p-4 transition-all ease-in hover:shadow-sm"
         prompt="What is Stellar AI Agent Kit?"
         method="replace"
         autoSend
       >
-        <span className="line-clamp-2 text-ellipsis text-sm font-semibold">
+        <div className="text-2xl mb-2">🚀</div>
+        <span className="line-clamp-2 text-ellipsis text-sm font-semibold text-center">
           What is Stellar AI Agent Kit?
         </span>
       </ThreadPrimitive.Suggestion>

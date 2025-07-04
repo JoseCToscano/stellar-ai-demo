@@ -24,14 +24,14 @@ export const Assistant = () => {
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem className="hidden md:block">
-                  <BreadcrumbLink href="#">
-                    Build Your Own ChatGPT UX
+                  <BreadcrumbLink href="https://stellarsandbox.dev" target="_blank">
+                    Get Started with Smart Wallets
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator className="hidden md:block" />
                 <BreadcrumbItem>
                   <BreadcrumbPage>
-                    Starter Template
+                    Get Your Free Coffee
                   </BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>

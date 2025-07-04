@@ -3,21 +3,17 @@ import { z } from "zod";
 
 export const env = createEnv({
   server: {
-    WALLET_WASM_HASH: z.string().min(1),
-    RPC_URL: z.string().url(),
-    NETWORK_PASSPHRASE: z.string().min(1),
-    AGENT_POLICY_SIGNER_KEY: z.string().min(1),
   },
-
+  client: {
+    NEXT_PUBLIC_SCF_SUBMISSION_URL: z.string().url(),
+  },
+  clientPrefix: "NEXT_PUBLIC_",
   /**
    * What object holds the environment variables at runtime. This is usually
    * `process.env` or `import.meta.env`.
    */
   runtimeEnv: {
-    WALLET_WASM_HASH: process.env.WALLET_WASM_HASH,
-    RPC_URL: process.env.RPC_URL,
-    NETWORK_PASSPHRASE: process.env.NETWORK_PASSPHRASE,
-    AGENT_POLICY_SIGNER_KEY: process.env.AGENT_POLICY_SIGNER_KEY,
+    NEXT_PUBLIC_SCF_SUBMISSION_URL: process.env.NEXT_PUBLIC_SCF_SUBMISSION_URL,
   },
 
   /**
