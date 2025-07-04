@@ -3,6 +3,7 @@ import { z } from "zod";
 
 export const env = createEnv({
   server: {
+    MASTRA_URL: z.string().url(),
   },
   client: {
     NEXT_PUBLIC_SCF_SUBMISSION_URL: z.string().url(),
@@ -14,6 +15,7 @@ export const env = createEnv({
    */
   runtimeEnv: {
     NEXT_PUBLIC_SCF_SUBMISSION_URL: process.env.NEXT_PUBLIC_SCF_SUBMISSION_URL,
+    MASTRA_URL: process.env.MASTRA_URL,
   },
 
   /**

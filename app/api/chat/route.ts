@@ -1,3 +1,4 @@
+import { env } from "@/env";
 import { frontendTools } from "@assistant-ui/react-ai-sdk";
 import { MastraClient } from "@mastra/client-js";
 
@@ -10,7 +11,7 @@ export async function POST(req: Request) {
   const { messages, system, tools } = await req.json();
 
   const client = new MastraClient({
-    baseUrl: "http://localhost:4111",
+    baseUrl: env.MASTRA_URL ?? "http://localhost:4111",
   });
   const agent = client.getAgent("stellarAgent");
   
