@@ -1,0 +1,1 @@
+/Users/josetoscano/Projects/stellar-ai-demo/contracts/contacts/target/wasm32-unknown-unknown/release/stellar_contacts.wasm: /Users/josetoscano/Projects/stellar-ai-demo/contracts/contacts/src/lib.rs /Users/josetoscano/Projects/stellar-ai-demo/contracts/contacts/src/test.rs
